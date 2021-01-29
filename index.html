@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        canvas {   
+            transition: height 0.5s;
+            width: 100%;
+            height: 0%;
+            margin: 0;
+            padding: 0;
+        }
+
+        CustomButton {
+
+            display: block;
+
+            padding: 10px;
+            background-color: lightblue;
+
+            border-radius: 25px;
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+
+            margin: auto;
+        }
+
+
+
+        .play {
+            max-width: 700px;
+            font-size: 100px;
+
+            margin-top: 330px;
+        }
+
+        .options {
+            max-width: 300px;
+            font-size: 50px;
+
+            margin-top: 30px;
+        }
+
+        #startPage {
+            transition: background-image 0.5s;
+            background-image: radial-gradient(white, white, lightgray);
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #darkOverlay {
+            z-index: -1;
+            background-color: black;
+
+            transition: opacity 0.5s;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #options {
+            border: 2px black solid;
+            position: relative;
+            z-index: 1000;
+            text-align: center;
+
+            max-width: 400px;
+            display: block;
+
+            background-color: lightblue;
+
+            border-radius: 25px;
+            padding: 100px;
+
+            margin: auto;
+            transition: transform 0.4s;
+            transform: translateY(2000px);
+
+            font-size: 50px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        #optionMenuTitle {
+            font-size: 70px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        input {
+            left: 10px;
+            top: 10px;
+            width: 70px;
+            height: 50px;
+            padding: 0px;
+            font-size: 30pt;
+            border: solid 0.5px #000;
+        }
+
+
+        OptionButton {
+
+            border-radius: 25px;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .coolHover {
+            transition: box-shadow 0.2s, border 0.1s;
+            box-shadow: 10px 10px lightgray;
+            border: 5px darkgray solid;
+
+        }
+
+        .coolHover:hover {
+            box-shadow: 7px 7px gray;
+            border: 2px black solid;
+        }
+
+        .close {
+            background-color: rgb(255, 97, 121);
+        }
+
+        .apply {
+            background-color: rgb(109, 204, 109);
+        }
+
+        .disableSelect {
+            user-select: none;
+            -ms-user-selec: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <canvas id="canvas" ></canvas>
+
+        <div id="startPage">
+        <CustomButton class="play disableSelect coolHover" onclick="play()"> PLAY </CustomButton>
+            <CustomButton class="options disableSelect coolHover" onclick="optionMenu()"> OPTIONS </CustomButton>
+        </div>
+
+        <div id="darkOverlay">
+
+        </div>
+
+        <div id="options" class="disableSelect">
+            <span id="optionMenuTitle" class="disableSelect ">Options</span><br>
+            width: <input type="number" id="widthSelector" value="10" min="5" max="100" /><br>
+            height: <input type="number" id="heightSelector" value="10" min="5" max="100" /><br> <br>
+            <OptionButton class="close disableSelect coolHover" onclick="optionMenuClose()"> Close </OptionButton>
+            <OptionButton class="apply disableSelect coolHover" onclick="optionMenuApply()"> Apply </OptionButtons>
+        </div>
+
+
+        <img style="display:none" id="x" src="graphicResources/elecric.png">
+        <img style="display:none" id="%" src="graphicResources/orange.png">
+        <img style="display:none" id="#" src="graphicResources/plain.png">
+        <img style="display:none" id="+" src="graphicResources/slide.png">
+        <img style="display:none" id="G" src="graphicResources/goal.png"> 
+        <img style="display:none" id="~" src="graphicResources/water.png">
+        <img style="display:none" id="Player" src="graphicResources/player.png">
+        <img style="display:none" id="PlayerO" src="graphicResources/playerOrange.png">
+
+
+
+
+    <script type='text/javascript'>
+        var Module = {};
+    </script>
+    <script async type="text/javascript" src="a.out.js"></script>
+    <script src="runTime.js"></script>
+</body>
+
+</html>

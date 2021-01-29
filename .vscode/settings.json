@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "utility": "cpp",
+        "*.tcc": "cpp",
+        "functional": "cpp",
+        "sstream": "cpp",
+        "cmath": "cpp",
+        "tuple": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "ostream": "cpp",
+        "chrono": "cpp"
+    }
+}
